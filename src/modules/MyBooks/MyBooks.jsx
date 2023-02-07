@@ -92,7 +92,7 @@ class MyBook extends Component {
                     <div className={styles.block}>
                         <BooksFilter handleChange={handleFilter} />
                         {isAvailble && <BookList removeBook={removeBook} items={items} />}
-                        {!isAvailble && <p>There are no books. Try again</p>}
+                        {!isAvailble && <p>There are no books yet.</p>}
                     </div>
                 </div>
             </div>
