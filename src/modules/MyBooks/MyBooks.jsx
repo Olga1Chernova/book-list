@@ -82,7 +82,7 @@ class MyBook extends Component {
         const isAvailble = Boolean(items.length);
         //console.log(items);
         return (
-            <div>
+            <divclassName={styles.mainWrapper}>
                 <h3>My Books</h3>
                 <div className={styles.wrapper}>
                     <div className={styles.block}>
