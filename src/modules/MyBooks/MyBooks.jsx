@@ -20,9 +20,11 @@ class MyBook extends Component {
         }
     }
 
-    componentDidUpdate() {
+    componentDidUpdate(prevProps, prevState) {
         const { items } = this.state;
-        localStorage.setItem("my-books", JSON.stringify(items));
+        if(prevState.items.length !==items.length){
+            localStorage.setItem("my-books", JSON.stringify(items));
+        }
     }
 
     addBook = ({title, author}) => {
